@@ -1,0 +1,320 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+.header {
+    background-image: url(Image/header.png);
+    background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 80px;
+  border-radius: 12px;
+}
+
+.topnav {
+  background-color: #eacf54;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.topnav a {
+  color: rgb(112, 35, 35);
+  padding: 14px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.topnav a:hover {
+  background-color: #d6bb22;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left-column, .right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2, .card h3 {
+  color: #004080;
+}
+
+.footer {
+  background-color: rgb(112, 35, 35);
+  color: #f4f7fa;
+  text-align: center;
+  padding: 10px;
+}
+
+/* start Main Page */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: #7f8081;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.library-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slides {
+  display: flex;
+  width: 200%;
+  animation: slide 10s infinite;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 40%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Slider animation */
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  45% { transform: translateX(0%); }
+  50% { transform: translateX(-100%); }
+  95% { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+
+/* end Main Page */
+
+/* start for events page */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.activity-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.activity-card .card-text {
+  margin-top: 15px;
+}
+
+.activity-card h3, h4 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.activity-card p {
+  font-size: 0.95em;
+  color: #333;
+}
+
+.p-button {
+  padding: 8px 16px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.p-button:hover {
+  background-color: #0066cc;
+}
+
+/* Flip Card */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 250px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+}
+
+.flip-card-front img, .flip-card-back img {
+  width: 65%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* end of events page */
+
+/* start for resources page */
+/* search bar start */
+
+.search-bar-container {
+  background-color: #f4f7fb;
+  padding: 15px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-bar-container form {
+  display: inline-flex;
+  max-width: 500px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-bar-container input[type="text"] {
+  flex: 1;
+  border: none;
+  padding: 12px 16px;
+  font-size: 1em;
+  outline: none;
+}
+
+.search-bar-container button {
+  background-color: #004080;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar-container button:hover {
+  background-color: #0066cc;
+}
+
+/* search bar end */
+/* end of resources page */
+
+/* google forms effect in contact page start */
+
+.card iframe {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+/* google forms effect in contact page end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .header-content {
+    flex-direction: column;
+  }
+
+  .logo {
+    height: 60px;
+  }
+}
